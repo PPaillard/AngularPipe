@@ -1,0 +1,9 @@
+<div *ngFor="let product of produits">
+    <div class="singleProduct">
+        <!-- Pipe pour mettre en Majuscule (uppercase)-->
+        <p>{{product.nom | uppercase}}</p>
+        <p>{{product.prix}}</p>
+        <!-- Pipe custom qui se trouve dans src/app/common/ -->
+        <p>{{product.description|truncatator:5}}</p>
+    </div>
+</div>
